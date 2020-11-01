@@ -170,6 +170,38 @@
                         </span>
                       @enderror
                       </div>
+
+                      <div class="form-group">
+                        <div class="input-group input-group-merge input-group-alternative">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Transaction Id" value="{{ old('transaction_id') }}" type="text" name="transaction_id">
+                        </div>
+                        @error('transaction_id')
+                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                      </div>
+
+                     
+
+                      <div class="form-group">
+                        <div class="input-group input-group-alternative mb-4">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-badge"></i></span>
+                          </div>
+                       
+                          <select class="form-control" name="selected_queue" id="selected_queue">
+                            <option value="" selected>Select Queue</option>
+                            <option value="QUEUE 1 2k">QUEUE 1 ( 2,000 satoshi )</option>
+                            <option value="QUEUE 2 3k">QUEUE 2 ( 30,000 satoshi )</option>
+                            <option value="QUEUE 3 7k">QUEUE 3 ( 70,000 satoshi )</option>
+                            <option value="QUEUE 4 3l">QUEUE 4 ( 3,00,000 satoshi )</option>
+                          </select>
+                        
+                      </div>
                       
                       <div class="text-center">
                         <button type="submit" class="btn btn-primary mt-4"> <i class="ni ni-cloud-upload-96"></i> Update & Processed</button>
@@ -191,7 +223,7 @@
                 </div>
               </div>
               <div class="col-xl-6">
-                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                <ul class="nav nav-footer justify-content-center justify-content-xl-end d-none">
                   <li class="nav-item">
                     <a href="https://www.agnih.com/" class="nav-link" target="_blank">Design & Developed by Agnih Software</a>
                   </li>

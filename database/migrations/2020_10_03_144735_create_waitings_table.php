@@ -20,6 +20,8 @@ class CreateWaitingsTable extends Migration
             $table->text('bitcoin_address');
             $table->string('username')->nullable();
             $table->string('method')->default('Direct');
+            $table->string('transaction_id')->nullable();
+            $table->string('selected_queue')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

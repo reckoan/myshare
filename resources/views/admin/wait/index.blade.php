@@ -44,6 +44,8 @@
                       <th>Email</th>
                       <th class="text-right">BitCoin Address</th>
                       <th class="text-right">Method</th>
+                      <th class="text-right">transaction Id</th>
+                      <th class="text-right">Selected queue</th>
                       <th class="text-right">Actions</th>
                   </tr>
               </thead>
@@ -58,6 +60,8 @@
                       <td>{{ $wait->email }}</td>
                       <td class="text-right">{{ $wait->bitcoin_address }}</td>
                       <td class="text-right">{{ $wait->method }}</td>
+                      <td class="text-right">{{ $wait->transaction_id }}</td>
+                      <td class="text-right">{{ $wait->selected_queue }}</td>
                       <td class="td-actions text-right">
                        
                         <button type="button" class="btn btn-info btn-icon btn-sm" data-toggle="modal" data-target=".bd-que-modal-lg-{{ $wait->id }}">

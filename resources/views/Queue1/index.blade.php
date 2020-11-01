@@ -175,8 +175,6 @@
           </div>
         </footer>
        
-         
-
 
         <script src="{{ asset('agnih/vendor/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('agnih/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>

@@ -50,6 +50,8 @@ class WaitingController extends Controller
             'name' => $request->name, 
             'email' => $request->email, 
             'bitcoin_address' => $request->bitcoin_address, 
+            'transaction_id' => $request->transaction_id,
+            'selected_queue' => $request->selected_queue
         ];
 
         
