@@ -30,42 +30,52 @@ class PayoutsController extends Controller
 
     public function payouts1()
     {
-        # code...
+        $payouts1 = Queue1move::latest()->paginate(20);
+        
+        return view('payouts.payouts1', compact('payouts1'));
     }
 
     public function payouts2()
     {
-        # code...
+        $payouts2 = Queue2move::latest()->paginate(20);
+        return view('payouts.payouts2', compact('payouts2'));
     }
 
     public function payouts3()
     {
-        # code...
+        $payouts3 = Queue3move::latest()->paginate(20);
+        return view('payouts.payouts3', compact('payouts3'));
     }
 
     public function payouts4()
     {
-        # code...
+       
+        $payouts4 = Queue4move::latest()->paginate(20);
+        return view('payouts.payouts4', compact('payouts4'));
     }
 
     public function payouts5()
     {
-        # code...
+        $payouts5 = Queue5move::latest()->paginate(20);
+        return view('payouts.payouts5', compact('payouts5'));
     }
 
     public function payouts6()
     {
-        # code...
+        $payouts6 = Queue6move::latest()->paginate(20);
+        return view('payouts.payouts6', compact('payouts6'));
     }
 
     public function payouts7()
     {
-        # code...
+        $payouts7 = Queue7move::latest()->paginate(20);
+        return view('payouts.payouts7', compact('payouts7'));
     }
 
     public function payouts8()
     {
-        # code...
+        $payouts8 = Queue8move::latest()->paginate(20);
+        return view('payouts.payouts8', compact('payouts8'));
     }
 
 

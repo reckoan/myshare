@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Taskwating;
 class TaskregisterController extends Controller
 {
     /**
@@ -35,7 +35,26 @@ class TaskregisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $this->validate($request, [
+            'username' => ['required'],
+            'name' => ['required'],
+            'email' => ['required'],
+            'bitcoin_address' => ['required'],
+        ]);
+           
+        $data = [
+            'username' => $request->username, 
+            'name' => $request->name, 
+            'email' => $request->email, 
+            'bitcoin_address' => $request->bitcoin_address, 
+        ];
+
+        Taskwating::create($data);
+
+        return redirect()->back()->with('success', 'SUCCESSFULLY REGISTERED SEE WAITING LIST FOR UPDATES');
+
+
     }
 
     /**

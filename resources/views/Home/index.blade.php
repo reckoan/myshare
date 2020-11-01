@@ -7,7 +7,7 @@
             <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
-        <link rel="icon" href="{{ asset('agnih/img/brand/favicon.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -289,9 +289,6 @@
               </div>
         </div>
        
-       
-         
-
 
         <script src="{{ asset('agnih/vendor/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('agnih/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
@@ -300,7 +297,6 @@
         <script src="{{ asset('agnih/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
         <!-- Argon JS -->
         <script src="{{ asset('agnih/js/argon.js?v=1.2.0') }}"></script>
-
 
     </body>
 </html>

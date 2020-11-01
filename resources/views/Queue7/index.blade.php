@@ -7,7 +7,7 @@
             <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
-        <link rel="icon" href="{{ asset('agnih/img/brand/favicon.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -24,7 +24,7 @@
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand" href="dashboard.html">
-              <img src="{{ asset('agnih/img/brand/white.png') }}">
+              MYTREASURE - Fast Q system 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -47,17 +47,17 @@
               </div>
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="{{ route('info') }}" class="nav-link">
+                  <a href="./" class="nav-link">
                     <span class="nav-link-inner--text">Home</span> 
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('waiting-list') }}" class="nav-link">
+                  <a href="{{ route('info') }}" class="nav-link">
                     <span class="nav-link-inner--text">Q-Status</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">
+                  <a href="{{ route('payouts') }}" class="nav-link">
                     <span class="nav-link-inner--text">Q-Payouts</span>
                   </a>
                 </li>
@@ -155,29 +155,21 @@
            
         </div>
         <!-- Footer -->
-        <footer class="py-5 footer pt-0" id="footer-main" style="margin-top: 80px">
+        <footer class="py-5 footer pt-0" id="footer-main" style="margin-top: 150px">
           <div class="container">
             <div class="row align-items-center justify-content-xl-between">
               <div class="col-xl-6">
                 <div class="copyright text-center text-xl-left text-muted">
-                  &copy; {{ date('Y') }} <a href="https://www.agnih.com" class="font-weight-bold ml-1" target="_blank">Agnih Software</a>
+                  &copy; {{ date('Y') }} - {{ date('Y') + 1 }}<a href="https://mytreasure.store/" class="font-weight-bold ml-1" target="_blank">MYTREASURE - Fast Q system</a>
                 </div>
               </div>
               <div class="col-xl-6">
-                {{-- <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
                   <li class="nav-item">
-                    <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                    <a href="https://www.agnih.com" class="nav-link" target="_blank">Design & Developed by Agnih</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                  </li>
-                </ul> --}}
+                 
+                </ul>
               </div>
             </div>
           </div>

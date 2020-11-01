@@ -7,7 +7,7 @@
             <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
-        <link rel="icon" href="{{ asset('agnih/img/brand/favicon.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -175,16 +175,21 @@
            
         </div>
         <!-- Footer -->
-        <footer class="py-5 footer pt-0" id="footer-main" style="margin-top: 80px">
+         <footer class="py-5 footer pt-0" id="footer-main" style="margin-top: 150px">
           <div class="container">
             <div class="row align-items-center justify-content-xl-between">
               <div class="col-xl-6">
                 <div class="copyright text-center text-xl-left text-muted">
-                  &copy; {{ date('Y') }} <a href="https://www.agnih.com" class="font-weight-bold ml-1" target="_blank">Agnih Software</a>
+                  &copy; {{ date('Y') }} - {{ date('Y') + 1 }}<a href="https://mytreasure.store/" class="font-weight-bold ml-1" target="_blank">MYTREASURE - Fast Q system</a>
                 </div>
               </div>
               <div class="col-xl-6">
-                
+                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                  <li class="nav-item">
+                    <a href="https://www.agnih.com" class="nav-link" target="_blank">Design & Developed by Agnih</a>
+                  </li>
+                 
+                </ul>
               </div>
             </div>
           </div>

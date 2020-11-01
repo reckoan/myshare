@@ -80,6 +80,7 @@
         </nav>
         <!-- Main content -->
         <div class="main-content">
+        
           <!-- Header -->
           <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-3">
             <div class="container">

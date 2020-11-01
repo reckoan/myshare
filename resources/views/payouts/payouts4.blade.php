@@ -23,9 +23,7 @@
         <!-- Navbar -->
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="dashboard.html">
-             MYTREASURE - Fast Q system 
-            </a>
+            <a class="navbar-brand" href="{{ route('payouts') }}"> MYTREASURE - Fast Q system </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,12 +45,12 @@
               </div>
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="./" class="nav-link">
+                  <a href="{{ route('info') }}" class="nav-link">
                     <span class="nav-link-inner--text">Home</span> 
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('info') }}" class="nav-link">
+                  <a href="{{ route('waiting-list') }}" class="nav-link">
                     <span class="nav-link-inner--text">Q-Status</span>
                   </a>
                 </li>
@@ -82,7 +80,7 @@
             <div class="header bg-primary pb-6">
                 <div class="container-fluid">
                   <div class="header-body">
-                    <h2 class="text-center m-t-4" style="text-align: center; color:#fff; padding-top: 24px;">CHECK YOUR QUEUE 4 LIST STATUS</h2>
+                    <h2 class="text-center m-t-4" style="text-align: center; color:#fff; padding-top: 24px;">CHECK YOUR PAYOUTS PAY-OUT STATUS 4 LIST</h2>
                     <div class="row align-items-center py-4" style="margin-top: 100px">
                         <div class="container-fluid mt--6">
                             <div class="row">
@@ -90,49 +88,63 @@
                                 <div class="card">
                                   <!-- Card header -->
                                   <div class="card-header border-0">
-                                    <h3 class="mb-0">QUEUE 4 FOR UPGRADE</h3>
+                                    <h3 class="mb-0">PAY-OUT STATUS</h3>
                                   </div>
                                   <!-- Light table -->
                                   <div class="table-responsive">
-                                    <table class="table align-items-center table-flush">
-                                      <thead class="thead-light">
+                                    <table class="table">
+                                    <thead>
                                         <tr>
-                                          <th scope="col" class="sort" data-sort="name">#</th>
-                                          <th scope="col" class="sort" data-sort="budget">Date</th>
-                                          <th scope="col" class="sort" data-sort="status">Name</th>
-                                          <th scope="col">Email</th>
+                                            <th class="text-center">#</th>
+                                            <th>Name</th>
+                                            <th>Bitcoin Address</th>
+                                            <th>Payment By</th>
+                                            <th class="text-right">Amount</th>
+                                            <th class="text-right">Status</th>
                                         </tr>
-                                      </thead>
-                                      <tbody class="list">
-                                        @foreach ($queue4 as $key => $two)
-                                           
-                                       <tr>
-                                        <td>
-                                           {{ $key + 1 }}
-                                        </td>
-                                      <td class="budget">
-                                        {{ $one->created_at }}
-                                      </td>
-                                      <td>
-                                        <span class="badge badge-dot mr-4">
-                                          <i class="bg-warning"></i>
-                                          <span class="status">{{ $one->name }}</span>
-                                        </span>
-                                      </td>
-                                      <td>
-                                         {{ $one->email }}
-                                      </td>
-                                      
-                                    </tr>
-                                        @endforeach
-                                        
-                                      </tbody>
-                                    </table>
+                                    </thead>
+                                    <tbody>
+                                      @foreach ($payouts4 as $index =>  $pay1)
+                                             
+                                        <tr>
+                                            <td class="text-center">{{ $index + 1 }}</td>
+                                            <td>{{ $pay1->name }}</td>
+                                            <td>{{ $pay1->bitcoin_address }}</td>
+                                            <td>
+                                                @if ($pay1->isPayed == 1)
+                                                    Bitcoin
+                                                @else
+                                                    -
+                                                @endif
+                                            </td>
+                                            <td class="text-right"> {{ $pay1->pay_amount }} </td>
+                                            <td class="td-actions text-right">
+                                                
+                                                @if ($pay1->isPayed == 1)
+                                                    <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm " data-original-title="" title="">
+                                                    Paid
+                                                    </button>
+                                                @else
+                                                     <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
+                                                        In-Progress
+                                                      </button>
+                                                @endif
+
+
+                                             
+                                              
+                                              
+                                            </td>
+                                        </tr>
+
+                                      @endforeach
+                                    </tbody>
+                                </table>
                                   </div>
                                   <!-- Card footer -->
                                   <div class="card-footer py-4">
                                     <nav aria-label="...">
-                                      {{ $queue4->links() }}
+                                       {{ $payouts4->links() }}
                                     </nav>
                                   </div>
                                 </div>

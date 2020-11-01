@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <!-- CSRF Token -->
-            <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
-        <link rel="icon" href="{{ asset('agnih/img/brand/favicon.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -102,7 +102,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                                <a href="{{ route('payouts1') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 1</a>
+                                <a href="{{ route('payouts1') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 1</a>
                             </p>
                           </div>
                         </div>
@@ -123,7 +123,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts2') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 2</a>
+                              <a href="{{ route('payouts2') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 2</a>
                             </p>
                           </div>
                         </div>
@@ -144,7 +144,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts3') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 3</a>
+                              <a href="{{ route('payouts3') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 3</a>
                             </p>
                           </div>
                         </div>
@@ -165,7 +165,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts4') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 4</a>
+                              <a href="{{ route('payouts4') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 4</a>
                             </p>
                           </div>
                         </div>
@@ -187,7 +187,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts5') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 5</a>
+                              <a href="{{ route('payouts5') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 5</a>
                             </p>
                           </div>
                         </div>
@@ -209,7 +209,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts6') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 6</a>
+                              <a href="{{ route('payouts6') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 6</a>
                             </p>
                           </div>
                         </div>
@@ -231,7 +231,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts7') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 7</a>
+                              <a href="{{ route('payouts7') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 7</a>
                             </p>
                           </div>
                         </div>
@@ -253,7 +253,7 @@
                               </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                              <a href="{{ route('payouts8') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> PAYOUT 8</a>
+                              <a href="{{ route('payouts8') }}" class="btn btn-primary btn-sm"> <i class="ni ni-bold-right"></i> Q PAYOUT 8</a>
                             </p>
                           </div>
                         </div>
