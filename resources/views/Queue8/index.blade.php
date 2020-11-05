@@ -13,8 +13,8 @@
         <!-- Icons -->
         <link rel="stylesheet" href="{{ asset('agnih/vendor/nucleo/css/nucleo.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('agnih/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
-        <!-- Argon CSS -->
-        <link rel="stylesheet" href="{{ asset('agnih/css/argon.css?v=1.2.0') }}" type="text/css">
+        <!-- agnih CSS -->
+        <link rel="stylesheet" href="{{ asset('agnih/css/agnih.css?v=1.2.0') }}" type="text/css">
 
         <!-- Styles -->
         
@@ -45,23 +45,7 @@
                   </div>
                 </div>
               </div>
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a href="./" class="nav-link">
-                    <span class="nav-link-inner--text">Home</span> 
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('info') }}" class="nav-link">
-                    <span class="nav-link-inner--text">Q-Status</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('payouts') }}" class="nav-link">
-                    <span class="nav-link-inner--text">Q-Payouts</span>
-                  </a>
-                </li>
-              </ul>
+              @include('layouts.HomeNav')
               <hr class="d-lg-none" />
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 
@@ -100,7 +84,7 @@
                                           <th scope="col" class="sort" data-sort="name">#</th>
                                           <th scope="col" class="sort" data-sort="budget">Date</th>
                                           <th scope="col" class="sort" data-sort="status">Name</th>
-                                          <th scope="col">Email</th>
+                                          <th scope="col">Bitcoin</th>
                                         </tr>
                                       </thead>
                                       <tbody class="list">
@@ -120,7 +104,7 @@
                                          </span>
                                        </td>
                                        <td>
-                                          {{ $one->email }}
+                                          {{ $one->bitcoin_address }}
                                        </td>
                                        
                                      </tr>
@@ -183,8 +167,8 @@
         <script src="{{ asset('agnih/vendor/js-cookie/js.cookie.js') }}"></script>
         <script src="{{ asset('agnih/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
         <script src="{{ asset('agnih/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
-        <!-- Argon JS -->
-        <script src="{{ asset('agnih/js/argon.js?v=1.2.0') }}"></script>
+        <!-- agnih JS -->
+        <script src="{{ asset('agnih/js/agnih.js?v=1.2.0') }}"></script>
 
 
     </body>

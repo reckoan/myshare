@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('agnih/vendor/nucleo/css/nucleo.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('agnih/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="{{ asset('agnih/css/argon.css?v=1.2.0') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('agnih/css/agnih.css?v=1.2.0') }}" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
     <!-- Styles -->
@@ -63,7 +63,7 @@
     <script src="{{ asset('agnih/vendor/chart.js/dist/Chart.min.js') }}"></script>
     <script src="{{ asset('agnih/vendor/chart.js/dist/Chart.extension.js') }}"></script>
     <!-- Argon JS -->
-    <script src="{{ asset('agnih/js/argon.js?v=1.2.0') }}"></script>
+    <script src="{{ asset('agnih/js/agnih.js?v=1.2.0') }}"></script>
     @include('sweetalert::alert')
     <script>
       $(document).ready(function(){

@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Auth::routes(['register' => true]);
+Route::get('/', 'HomepageController@index');
+
+// Route::any('users/{id}', );
+
+Auth::routes(['register' => false]);
+
+Route::get('/waitingregister', 'HomepageController@waitingregister')->name('waitingregister');
 
 Route::resource('waiting', 'WaitingController');
 Route::resource('tackregister', 'TaskregisterController');

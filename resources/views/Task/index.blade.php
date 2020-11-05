@@ -14,8 +14,8 @@
         <!-- Icons -->
         <link rel="stylesheet" href="{{ asset('agnih/vendor/nucleo/css/nucleo.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('agnih/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
-        <!-- Argon CSS -->
-        <link rel="stylesheet" href="{{ asset('agnih/css/argon.css?v=1.2.0') }}" type="text/css">
+        <!-- agnih CSS -->
+        <link rel="stylesheet" href="{{ asset('agnih/css/agnih.css?v=1.2.0') }}" type="text/css">
 
         <!-- Styles -->
         
@@ -24,7 +24,7 @@
         <!-- Navbar -->
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="dashboard.html">
+            <a class="navbar-brand" href="./">
               <span>MYTREASURE - Fast Q system</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,23 +46,7 @@
                   </div>
                 </div>
               </div>
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a href="./" class="nav-link">
-                    <span class="nav-link-inner--text">Home</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('info') }}" class="nav-link">
-                    <span class="nav-link-inner--text">Q-Status</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('payouts') }}" class="nav-link">
-                    <span class="nav-link-inner--text">Q-Payouts</span>
-                  </a>
-                </li>
-              </ul>
+              @include('layouts.HomeNav')
               <hr class="d-lg-none" />
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 
@@ -209,8 +193,8 @@
         <script src="{{ asset('agnih/vendor/js-cookie/js.cookie.js') }}"></script>
         <script src="{{ asset('agnih/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
         <script src="{{ asset('agnih/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
-        <!-- Argon JS -->
-        <script src="{{ asset('agnih/js/argon.js?v=1.2.0') }}"></script>
+        <!-- agnih JS -->
+        <script src="{{ asset('agnih/js/agnih.js?v=1.2.0') }}"></script>
 
 
     </body>
