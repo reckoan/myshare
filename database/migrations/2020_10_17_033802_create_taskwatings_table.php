@@ -19,7 +19,7 @@ class CreateTaskwatingsTable extends Migration
             $table->string('email');
             $table->string('username');
             $table->string('bitcoin_address');
-            $table->string('method')->nullable('Task');
+            $table->string('method')->default('Task');
             $table->softDeletes();
             $table->timestamps();
         });

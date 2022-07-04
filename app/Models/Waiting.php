@@ -9,7 +9,7 @@ class Waiting extends Model
 {
     use SoftDeletes;
     
-    protected $fillable = ['name', 'email', 'bitcoin_address','username','method'];
+    protected $fillable = ['name', 'email', 'bitcoin_address','username','method','transaction_id','selected_queue'];
 
 
 

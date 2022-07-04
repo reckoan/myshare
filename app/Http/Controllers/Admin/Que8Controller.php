@@ -15,7 +15,7 @@ class Que8Controller extends Controller
      */
     public function index()
     {
-        $que8 = Queue8::latest()->paginate(15);
+        $que8 = Queue8::paginate(15);
         return view('admin.que8.index', compact('que8'));
     }
 

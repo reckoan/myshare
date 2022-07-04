@@ -14,8 +14,8 @@ class Queue7Controller extends Controller
      */
     public function index()
     {
-        $queue7 = Queue7::latest()->paginate(20);
-       
+        $queue7 = Queue7::paginate(20);
+
         return view('Queue7.index', compact('queue7'));
     }
 

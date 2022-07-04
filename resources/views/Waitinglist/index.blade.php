@@ -99,7 +99,9 @@
                                           <th scope="col" class="sort" data-sort="budget">Date</th>
                                           <th scope="col" class="sort" data-sort="status">Name</th>
                                           <th scope="col" class="sort" data-sort="status">Username</th>
-                                          <th scope="col">States</th>
+                                          <th scope="col" class="sort" data-sort="status">Transaction ID</th>
+                                          <th scope="col" class="sort" data-sort="status">Queue</th>
+                                          <th scope="col">Status</th>
                                         </tr>
                                       </thead>
                                       <tbody class="list">
@@ -114,7 +116,7 @@
                                             <small><b>{{ $Waiting->created_at->diffForHumans() }}</b></small>
                                           </td>
                                           <td>
-                                            {{ $Waiting->name }}
+                                            {{ $Waiting->bitcoin_address }}
                                           </td>
                                           <td>
                                             <span class="badge badge-dot mr-4">
@@ -123,9 +125,14 @@
                                             </span>
                                             
                                           </td>
-
+<td>
+                                            {{ $Waiting->transaction_id }}
+                                          </td>
                                           <td>
-                                            <span class="badge badge-default">Waiting List</span>
+                                            {{ $Waiting->selected_queue }}
+                                          </td>
+                                          <td>
+                                            <span class="badge badge-default">In progress</span>
                                          </td>
                                           
                                         </tr>

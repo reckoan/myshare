@@ -15,7 +15,7 @@ class Que6Controller extends Controller
      */
     public function index()
     {
-        $que6 = Queue6::latest()->paginate(15);
+        $que6 = Queue6::paginate(15);
         return view('admin.que6.index', compact('que6'));
     }
 

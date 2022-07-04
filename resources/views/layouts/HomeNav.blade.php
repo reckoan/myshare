@@ -16,12 +16,12 @@
     </li>
     <li class="nav-item">
         <a href="{{ route('waitingregister') }}" class="nav-link">
-          <span class="nav-link-inner--text">Q-Activate </span>
+          <span class="nav-link-inner--text">Q-Upgrade </span>
         </a>
     </li>
     <li class="nav-item">
         <a href="{{ route('tackregister.index') }}" class="nav-link">
-          <span class="nav-link-inner--text">Q-Upgrade</span>
+          <span class="nav-link-inner--text">Q-Activate</span>
         </a>
     </li>
   </ul>

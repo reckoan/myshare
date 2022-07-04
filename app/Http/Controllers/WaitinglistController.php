@@ -14,8 +14,8 @@ class WaitinglistController extends Controller
      */
     public function index()
     {
-        $getWaiting = Waiting::latest()->paginate(20);
-       
+        $getWaiting = Waiting::paginate(20);
+
         return view('Waitinglist.index', compact('getWaiting'));
     }
 

@@ -74,17 +74,17 @@
           </h6>
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
-            
+
             <li class="nav-item">
               <a class="nav-link" href="{{ route('wait.index') }}">
                 <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Que1 Waiting List</span>
+                <span class="nav-link-text">Q Upgrade Waiting List</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('import') }}">
                 <i class="ni ni-cloud-upload-96"></i>
-                <span class="nav-link-text">Que1 Upload Waiting List</span>
+                <span class="nav-link-text">Q Upload Waiting List</span>
               </a>
             </li>
             <li class="nav-item">
@@ -99,8 +99,8 @@
                 <span class="nav-link-text">Upload Task Waiting List</span>
               </a>
             </li>
-           
-            
+
+
           </ul>
         </div>
       </div>

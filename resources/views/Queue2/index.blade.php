@@ -23,7 +23,7 @@
         <!-- Navbar -->
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="dashboard.html">
+            <a class="navbar-brand" href="/">
              MYTREASURE - Fast Q system 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,8 +83,9 @@
                                         <tr>
                                           <th scope="col" class="sort" data-sort="name">#</th>
                                           <th scope="col" class="sort" data-sort="budget">Date</th>
-                                          <th scope="col" class="sort" data-sort="status">Name</th>
+                                          <th scope="col" class="sort" data-sort="status">Username</th>
                                           <th scope="col">Bitcoin</th>
+                                          <th scope="col">Method</th>
                                         </tr>
                                       </thead>
                                       <tbody class="list">
@@ -100,11 +101,14 @@
                                       <td>
                                         <span class="badge badge-dot mr-4">
                                           <i class="bg-warning"></i>
-                                          <span class="status">{{ $two->name }}</span>
+                                          <span class="status">{{ $two->username }}</span>
                                         </span>
                                       </td>
                                       <td>
                                          {{ $two->bitcoin_address }}
+                                      </td>
+                                       <td>
+                                         {{ $two->method }}
                                       </td>
                                       
                                     </tr>

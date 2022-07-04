@@ -71,7 +71,7 @@
               <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                   <div class="col-xl-10 col-lg-10 col-md-10 px-5">
-                    <h1 class="text-white">FILL REQUIRED DETAILS & CHECK YOUR QUEUE STATUS</h1>
+                    <h1 class="text-white">Q - UPGRDAE</h1>
                     <p class="text-lead text-white">Give you name and email address, bit coin address and username Of mytreasure </p>
                   </div>
                 </div>
@@ -100,11 +100,13 @@
                         @csrf
 
                         <div class="form-group">
+                             <h1 class="text-black">Make payment then fill the form after verify we will inform within 24 hours</h1>
+                            <label>SEND PAYMENT TO THE ADDRESS: 11111111111111</label>
                           <div class="input-group input-group-merge input-group-alternative mb-3">
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                             </div>
-                            <input class="form-control" placeholder="mytreasure Username" type="text" value="{{ old('username') }}" name="username">
+                            <input class="form-control" placeholder="ALLAREWIN Username" type="text" value="{{ old('username') }}" name="username">
                            
                           </div>
                           @error('username')
@@ -162,13 +164,13 @@
                           </div>
                           <input class="form-control" placeholder="Transaction Id" value="{{ old('transaction_id') }}" type="text" name="transaction_id">
                         </div>
+                        
                         @error('transaction_id')
                         <span class="text-danger" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                       </div>
-
                      
 
                       <div class="form-group">
@@ -179,10 +181,12 @@
                        
                           <select class="form-control" name="selected_queue" id="selected_queue">
                             <option value="" selected>Select Queue</option>
-                            <option value="QUEUE 1 2k">QUEUE 1 ( 2,000 satoshi )</option>
-                            <option value="QUEUE 2 3k">QUEUE 2 ( 30,000 satoshi )</option>
-                            <option value="QUEUE 3 7k">QUEUE 3 ( 70,000 satoshi )</option>
-                            <option value="QUEUE 4 3l">QUEUE 4 ( 3,00,000 satoshi )</option>
+                            <option value="QUEUE 3">QUEUE 3 ( 1,000 satoshi )</option>
+                            <option value="QUEUE 4">QUEUE 4 ( 6,500 satoshi )</option>
+                             <option value="QUEUE 5">QUEUE 5 ( 31,000 satoshi )</option>
+                             <option value="QUEUE 6">QUEUE 6 ( 62,000 satoshi )</option>
+                             <option value="QUEUE 7">QUEUE 7 ( 125,000 satoshi )</option>
+                              <option value="QUEUE 8">QUEUE 8 ( 250,000 satoshi )</option>
                           </select>
                         
                       </div>

@@ -24,28 +24,46 @@ use Illuminate\Support\Facades\DB;
 
 class MoveController extends Controller
 {
-    
+
     public function move(Request $request)
     {
-      
-        
 
-       $process =  $this->Process($request->que_id, $request->id);
-       $this->algorithm();
+       $process =  $this->Process($request->que_id, $request->id, $request->url);
+      // $this->algorithm();
        return redirect()->back()->with('success', 'list as been moved to Queue');
 
     }
 
-    public function Process($que_id,$id)
+    public function Process($que_id,$id,$url)
     {
-        
-        for ($i=2; $i <= 8 ; $i++) { 
+
+
+        for ($i=2; $i <= 8 ; $i++) {
 
             if ($que_id == $i) {
 
-                
-                $getRow = Queue1::findOrFail($id);
-                
+//                if($que_id == 2){
+//                    $getRow = Queue1::findOrFail($id);
+//                } else if($que_id == 3){
+//                    $getRow = Queue2::findOrFail($id);
+//                }else if ($que_id == 4) {
+//                    $getRow = Queue3::findOrFail($id);
+//                }else if($que_id == 5){
+//                    $getRow = Queue4::findOrFail($id);
+//                }else if($que_id == 6){
+//                    $getRow = Queue5::findOrFail($id);
+//                }else if($que_id == 7){
+//                    $getRow = Queue6::findOrFail($id);
+//                }else if($que_id == 8){
+//                    $getRow = Queue7::findOrFail($id);
+//                }
+
+                preg_match_all('!\d+\.*\d*!', $url, $matches);
+                $url = collect($matches)->flatten(1);
+
+                $getRow  =  DB::table('queue'. $url[0] .'s')->where('id', $id)->first();
+
+
                 $qdata = [
                       'name' => $getRow->name,
                       'email' => $getRow->email,
@@ -54,26 +72,42 @@ class MoveController extends Controller
                       'created_at' => Carbon::now(),
                       'updated_at' => Carbon::now(),
                       'method' => 'Investment',
-        
+
                   ];
 
-             
+                 $qu = 'queue'. $url[0] .'moves';
+
                 $insert = DB::table('queue'.$i.'s')->insert($qdata);
-               
-             
-                  $move = Queue1move::create($qdata);
+                $move  =  DB::table($qu)->insert($qdata);
+
+//                if($que_id == 2){
+//                    $move = Queue1move::create($qdata);
+//                } else if($que_id == 3){
+//                    $move = Queue2move::create($qdata);
+//                }else if ($que_id == 4) {
+//                    $move = Queue3move::create($qdata);
+//                }else if($que_id == 5){
+//                    $move = Queue4move::create($qdata);
+//                }else if($que_id == 6){
+//                    $move = Queue5move::create($qdata);
+//                }else if($que_id == 7){
+//                    $move = Queue6move::create($qdata);
+//                }else if($que_id == 8){
+//                    $move = Queue7move::create($qdata);
+//                }
+
                    if ($move) {
-                       $getRow->delete();
+                       DB::table('queue'. $url[0] .'s')->where('id', $id)->delete();
                    }
-              
-               
+
+
                 return true;
 
             }
             //return  false;
          }
     }
-    
+
     public function algorithm()
     {
         $que1 = Queue1::count();
@@ -87,7 +121,7 @@ class MoveController extends Controller
 
         if ($que1 > 10) {
             $firstRow  = Queue1::get()->first();
-            
+
             $data = [
                 'name' => $firstRow->name,
                 'email' => $firstRow->email,
@@ -104,7 +138,7 @@ class MoveController extends Controller
         }
         if($que2 > 10){
             $firstRow  = Queue2::get()->first();
-            
+
                 $data = [
                     'name' => $firstRow->name,
                     'email' => $firstRow->email,
@@ -113,15 +147,15 @@ class MoveController extends Controller
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ];
-    
+
                 $addRow = Queue3::create($data);
                 $Queue1move = Queue2move::create($data);
-    
-                $deleteRow = Queue2::whereId($firstRow->id)->delete();  
+
+                $deleteRow = Queue2::whereId($firstRow->id)->delete();
         }
         if($que3 > 10){
             $firstRow  = Queue3::get()->first();
-            
+
                 $data = [
                     'name' => $firstRow->name,
                     'email' => $firstRow->email,
@@ -130,15 +164,15 @@ class MoveController extends Controller
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ];
-    
+
                 $addRow = Queue4::create($data);
                 $Queue1move = Queue3move::create($data);
-    
-                $deleteRow = Queue3::whereId($firstRow->id)->delete();  
+
+                $deleteRow = Queue3::whereId($firstRow->id)->delete();
         }
         if($que4 > 10){
             $firstRow  = Queue4::get()->first();
-            
+
                 $data = [
                     'name' => $firstRow->name,
                     'email' => $firstRow->email,
@@ -147,15 +181,15 @@ class MoveController extends Controller
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ];
-    
+
                 $addRow = Queue5::create($data);
                 $Queue1move = Queue4move::create($data);
-    
-                $deleteRow = Queue4::whereId($firstRow->id)->delete();  
+
+                $deleteRow = Queue4::whereId($firstRow->id)->delete();
         }
         if($que5 > 10){
             $firstRow  = Queue5::get()->first();
-            
+
             $data = [
                 'name' => $firstRow->name,
                 'email' => $firstRow->email,
@@ -168,11 +202,11 @@ class MoveController extends Controller
             $addRow = Queue6::create($data);
             $Queue1move = Queue5move::create($data);
 
-            $deleteRow = Queue5::whereId($firstRow->id)->delete(); 
+            $deleteRow = Queue5::whereId($firstRow->id)->delete();
         }
         if($que6 > 10){
             $firstRow  = Queue6::get()->first();
-            
+
             $data = [
                 'name' => $firstRow->name,
                 'email' => $firstRow->email,
@@ -185,12 +219,12 @@ class MoveController extends Controller
             $addRow = Queue7::create($data);
             $Queue1move = Queue6move::create($data);
 
-            $deleteRow = Queue6::whereId($firstRow->id)->delete();  
+            $deleteRow = Queue6::whereId($firstRow->id)->delete();
         }
 
         if($que7 > 10){
             $firstRow  = Queue7::get()->first();
-            
+
                 $data = [
                     'name' => $firstRow->name,
                     'email' => $firstRow->email,
@@ -199,16 +233,16 @@ class MoveController extends Controller
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ];
-    
+
                 $addRow = Queue8::create($data);
                 $Queue1move = Queue7move::create($data);
-    
-                $deleteRow = Queue7::whereId($firstRow->id)->delete();  
+
+                $deleteRow = Queue7::whereId($firstRow->id)->delete();
         }
 
         if($que8 > 10){
             $firstRow  = Queue8::get()->first();
-            
+
                 $data = [
                     'name' => $firstRow->name,
                     'email' => $firstRow->email,
@@ -217,12 +251,12 @@ class MoveController extends Controller
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ];
-    
+
                 $Queue1move = Queue8move::create($data);
-                $deleteRow = Queue8::whereId($firstRow->id)->delete();  
+                $deleteRow = Queue8::whereId($firstRow->id)->delete();
         }
 
-        
-     
+
+
     }
 }

@@ -15,7 +15,7 @@ class Que2Controller extends Controller
      */
     public function index()
     {
-        $que2 = Queue2::latest()->paginate(15);
+        $que2 = Queue2::paginate(15);
         return view('admin.que2.index', compact('que2'));
     }
 

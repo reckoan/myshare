@@ -33,7 +33,7 @@
           </div>
           <!-- Light table -->
           <div class="table-responsive">
-            
+
             <table class="table">
               <thead>
                   <tr>
@@ -60,20 +60,20 @@
                         <button type="button" class="btn btn-info btn-icon btn-sm" data-toggle="modal" data-target=".bd-que-modal-lg-{{ $wait->id }}">
                           <i class="ni ni-circle-08 pt-1"></i>
                         </button>
-                       
+
                         <button type="button" class="btn btn-danger btn-icon btn-sm" data-toggle="modal" data-target=".bd-delete-modal-sm-{{ $wait->id }}">
                           <i class="ni ni-fat-remove pt-1"></i>
                         </button>
 
-                        
-  
+
+
                        <form id="delete-form-{{ $wait->id }}" action="{{ route('que1.destroy', $wait->id) }}" method="POST" class="d-none">
                            @csrf
                            @method('DELETE')
                        </form>
-                     
 
-                      
+
+
 
                       <div class="modal fade bd-que-modal-lg-{{ $wait->id  }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
@@ -85,29 +85,30 @@
                               </button>
                             </div>
                             <div class="modal-body">
-                              
+
                                <div class="row">
 
                                 @for ($i = 2; $i <= 8; $i++)
-                           
+
 
                               <form id="approve-queue-{{ $i }}" action="{{ route('moveque.moves') }}" method="POST" class="d-nonoe">
                                   @csrf
                                   @method('POST')
                                     <input type="hidden" name="que_id" value="{{ $i }}">
                                     <input type="hidden" name="id" value="{{ $wait->id }}">
+                                    <input type="hidden" name="url" value="{{ \Request::segment(1) }}">
                                     <button class="btn btn-primary ml-2" type="submit">QUEUE {{ $i }}</button>
                               </form>
                               @endfor
 
-                                
+
                                </div>
 
                             </div>
                           </div>
                         </div>
                       </div>
-                      
+
 
                       <div class="modal fade bd-delete-modal-sm-{{ $wait->id }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-sm">
@@ -123,7 +124,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                             
+
                               <a class="btn btn-danger" href="{{ route('que1.destroy', $wait->id) }}"
                                 onclick="event.preventDefault();
                                               document.getElementById('delete-form-{{ $wait->id }}').submit();" data-toggle="tooltip" data-placement="top" title="Delete!">
@@ -141,7 +142,7 @@
                        </td>
                   </tr>
                   @endforeach
-                  
+
               </tbody>
           </table>
 
@@ -157,8 +158,8 @@
       </div>
     </div>
     <!-- Dark table -->
-   
-   
+
+
   </div>
 
 

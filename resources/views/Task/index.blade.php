@@ -51,11 +51,11 @@
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 
                 <li class="nav-item d-none d-lg-block ml-lg-4">
-                  <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
+                  <a href="https://allarewin.space/" target="_blank" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
                       <i class="fas fa-home mr-2"></i>
                     </span>
-                    <span class="nav-link-inner--text">Back to mytreasure</span>
+                    <span class="nav-link-inner--text">Back to ALLAREWIN</span>
                   </a>
                 </li>
               </ul>
@@ -70,7 +70,7 @@
               <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                   <div class="col-xl-8 col-lg-8 col-md-8 px-5">
-                    <h1 class="text-white">Register Your an account for  New Q-Status</h1>
+                    <h1 class="text-white">Create space through TASK</h1>
                     <p class="text-lead text-white">Give you name and email address, bit coin address and username </p>
                   </div>
                 </div>

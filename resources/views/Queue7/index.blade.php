@@ -17,14 +17,14 @@
         <link rel="stylesheet" href="{{ asset('agnih/css/agnih.css?v=1.2.0') }}" type="text/css">
 
         <!-- Styles -->
-        
+
     </head>
     <body class="bg-default">
         <!-- Navbar -->
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="dashboard.html">
-              MYTREASURE - Fast Q system 
+            <a class="navbar-brand" href="/">
+              MYTREASURE - Fast Q system
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
               @include('layouts.HomeNav')
               <hr class="d-lg-none" />
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                
+
                 <li class="nav-item d-none d-lg-block ml-lg-4">
                   <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
@@ -83,13 +83,14 @@
                                         <tr>
                                           <th scope="col" class="sort" data-sort="name">#</th>
                                           <th scope="col" class="sort" data-sort="budget">Date</th>
-                                          <th scope="col" class="sort" data-sort="status">Name</th>
+                                          <th scope="col" class="sort" data-sort="status">username</th>
                                           <th scope="col">Bitcoin</th>
+                                          <th scope="col">Method</th>
                                         </tr>
                                       </thead>
                                       <tbody class="list">
-                                        @foreach ($queue7 as $key => $two)
-                                           
+                                        @foreach ($queue7 as $key => $one)
+
                                        <tr>
                                         <td>
                                            {{ $key + 1 }}
@@ -100,16 +101,19 @@
                                       <td>
                                         <span class="badge badge-dot mr-4">
                                           <i class="bg-warning"></i>
-                                          <span class="status">{{ $one->name }}</span>
+                                          <span class="status">{{ $one->username }}</span>
                                         </span>
                                       </td>
                                       <td>
                                          {{ $one->bitcoin_address }}
                                       </td>
-                                      
+                                      <td>
+                                         {{ $one->method }}
+                                      </td>
+
                                     </tr>
                                         @endforeach
-                                        
+
                                       </tbody>
                                     </table>
                                   </div>
@@ -123,20 +127,20 @@
                               </div>
                             </div>
                             <!-- Dark table -->
-                           
-                            
+
+
                           </div>
-                       
+
                     </div>
                     <!-- Card stats -->
-                    
+
                   </div>
-                </div> 
+                </div>
               </div>
         </div>
 
         <div class="clearfix">
-           
+
         </div>
         <!-- Footer -->
         <footer class="py-5 footer pt-0" id="footer-main" style="margin-top: 150px">
@@ -152,14 +156,14 @@
                   <li class="nav-item">
                     <a href="https://www.agnih.com" class="nav-link" target="_blank">Design & Developed by Agnih</a>
                   </li>
-                 
+
                 </ul>
               </div>
             </div>
           </div>
         </footer>
-       
-         
+
+
 
 
         <script src="{{ asset('agnih/vendor/jquery/dist/jquery.min.js') }}"></script>
