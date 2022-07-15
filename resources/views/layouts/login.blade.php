@@ -34,7 +34,7 @@
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
             <div class="container">
               <a class="navbar-brand" href="./">
-                MYTREASURE - Fast Q system
+                ALLANDRICH - MYTREASURE
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
                 <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                  
                   <li class="nav-item d-none d-lg-block ml-lg-4">
-                    <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
+                    <a href="https://allarewin.space/" target="_blank" class="btn btn-neutral btn-icon">
                       <span class="btn-inner--icon">
                         <i class="fas fa-home mr-2"></i>
                       </span>
@@ -80,7 +80,7 @@
                   <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-8 px-5">
                       <h1 class="text-white">Welcome!</h1>
-                      <p class="text-lead text-white">Login AS #Root Admin</p>
+                      <p class="text-lead text-white">Login AS #ALLANDRICH</p>
                     </div>
                   </div>
                 </div>

@@ -13,7 +13,7 @@ class TaskregisterController extends Controller
      */
     public function index()
     {
-        
+
          return view('Task.index');
     }
 
@@ -35,24 +35,24 @@ class TaskregisterController extends Controller
      */
     public function store(Request $request)
     {
-         
+
         $this->validate($request, [
             'username' => ['required'],
-            'name' => ['required'],
-            'email' => ['required'],
+//            'name' => ['required'],
+//            'email' => ['required'],
             'bitcoin_address' => ['required'],
         ]);
-           
+
         $data = [
-            'username' => $request->username, 
-            'name' => $request->name, 
-            'email' => $request->email, 
-            'bitcoin_address' => $request->bitcoin_address, 
+            'username' => $request->username,
+//            'name' => $request->name,
+//            'email' => $request->email,
+            'bitcoin_address' => $request->bitcoin_address,
         ];
 
         Taskwating::create($data);
 
-        return redirect()->back()->with('success', 'SUCCESSFULLY REGISTERED SEE WAITING LIST FOR UPDATES');
+        return redirect()->back()->with('success', 'SUCCESSFULLY ADDED IN WAITING LIST FOR UPDATES');
 
 
     }

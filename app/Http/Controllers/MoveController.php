@@ -71,7 +71,7 @@ class MoveController extends Controller
                       'username' => $getRow->username,
                       'created_at' => Carbon::now(),
                       'updated_at' => Carbon::now(),
-                      'method' => 'Investment',
+                      'method' => 'Direct',
 
                   ];
 

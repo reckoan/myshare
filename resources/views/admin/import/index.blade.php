@@ -28,7 +28,7 @@
             <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0"> Upload Q1 Waiting LIST</h3>
+                  <h3 class="mb-0"> Upload UPGRADE Waiting LIST</h3>
                 </div>
               
                

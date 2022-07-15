@@ -30,7 +30,7 @@
         <div class="card">
           <!-- Card header -->
           <div class="card-header border-0">
-            <h3 class="mb-0">Waiting Q1 LIST</h3>
+            <h3 class="mb-0">WAITING FOR UPGRADE</h3>
           </div>
           <!-- Light table -->
           <div class="table-responsive">
@@ -40,8 +40,8 @@
                   <tr>
                       <th class="text-center">#</th>
                       <th>Date</th>
-                      <th>Name</th>
-                      <th>Email</th>
+                      <th>Task Name</th>
+                      <th>Created Date</th>
                       <th class="text-right">BitCoin Address</th>
                       <th class="text-right">Username</th>
                       <th class="text-right">Method</th>

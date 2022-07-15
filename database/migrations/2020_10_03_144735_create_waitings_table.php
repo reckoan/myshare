@@ -15,9 +15,9 @@ class CreateWaitingsTable extends Migration
     {
         Schema::create('waitings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->text('bitcoin_address');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->text('bitcoin_address')->nullable();
             $table->string('username')->nullable();
             $table->string('method')->default('Direct');
             $table->string('transaction_id')->nullable();

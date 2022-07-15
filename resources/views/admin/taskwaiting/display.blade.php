@@ -15,6 +15,7 @@
             </nav>
           </div>
           <div class="col-lg-6 col-5 text-right">
+            <a href="{{ route('bulkMoveQ1') }}" class="btn btn-sm btn-neutral"><i class="fa fa-cloud-upload"></i> Bulk Move (Q1)</a>
             <a href="{{ route('import') }}" class="btn btn-sm btn-neutral"><i class="fa fa-cloud-upload"></i> Upload CSV</a>
             <a href="#" class="btn btn-sm btn-neutral">Queue 1 Move List</a>
           </div>
@@ -29,9 +30,9 @@
       @if(session()->has('success'))
       <div class="col-md-12">
           <div role="alert" class="alert alert-success alert-dismissible"><span class="alert-inner--icon">
-              <i class="ni ni-like-2"></i></span> 
+              <i class="ni ni-like-2"></i></span>
               <span class="alert-inner--text">
-                  <strong> {{ session('success') }}</strong></span> <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">×</span></button> 
+                  <strong> {{ session('success') }}</strong></span> <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                   <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
           </div>
       </div>
@@ -39,9 +40,9 @@
       @if(session()->has('delete'))
       <div class="col-md-12">
           <div role="alert" class="alert alert-danger alert-dismissible"><span class="alert-inner--icon">
-              <i class="ni ni-like-2"></i></span> 
+              <i class="ni ni-like-2"></i></span>
               <span class="alert-inner--text">
-                  <strong> {{ session('delete') }}</strong></span> <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">×</span></button> 
+                  <strong> {{ session('delete') }}</strong></span> <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                   <button type="button" data-dismiss="alert" aria-label="Close" class="close">
                     <span aria-hidden="true">×</span>
                   </button>
@@ -53,25 +54,25 @@
         <div class="card">
           <!-- Card header -->
           <div class="card-header border-0">
-            <h3 class="mb-0">WAITING LIST</h3>
+            <h3 class="mb-0">WAITING FOR Q1 ACTIVATION</h3>
           </div>
           <!-- Light table -->
           <div class="table-responsive">
             <table class="table align-items-center  table-flush">
               <thead class="thead-light">
                 <tr>
-                  <th scope="col" class="sort" data-sort="name">Date</th>
-                  <th scope="col" class="sort" data-sort="budget">Name</th>
-                  <th scope="col" class="sort" data-sort="status">Email</th>
-                
-                  <th scope="col" class="sort" data-sort="completion">BitCoin</th>
+                  <th scope="col" class="sort" data-sort="name">Updated Date</th>
+                  <th scope="col" class="sort" data-sort="budget">Task Name</th>
+                  <th scope="col" class="sort" data-sort="status">Created Date</th>
+
+                  <th scope="col" class="sort" data-sort="completion">Bitcoin</th>
                   <th scope="col" class="sort" data-sort="completion">Username</th>
                   <th scope="col"></th>
                 </tr>
               </thead>
               <tbody class="list">
                @foreach ($waiting as $wait)
-                   
+
                 <tr>
                   <th scope="row">
                      {{ $wait->created_at }}
@@ -85,7 +86,7 @@
                       <span class="status">{{ $wait->email }}</span>
                     </span>
                   </td>
-                 
+
                   <td>
                     {{ $wait->bitcoin_address }}
                   </td>
@@ -93,24 +94,24 @@
                     {{ $wait->username }}
                   </td>
                   <td class="text-right">
-                    
+
                     <button type="button" class="btn btn-info btn-icon btn-sm" data-toggle="modal" data-target=".bd-que-modal-lg-{{ $wait->id }}">
                       <i class="ni ni-circle-08 pt-1"></i>
                     </button>
-                   
+
                     <button type="button" class="btn btn-danger btn-icon btn-sm" data-toggle="modal" data-target=".bd-delete-modal-sm-{{ $wait->id }}">
                       <i class="ni ni-fat-remove pt-1"></i>
                     </button>
 
-                    
+
 
                    <form id="delete-form-{{ $wait->id }}" action="{{ route('taskshow.destroy', $wait->id) }}" method="POST" class="d-none">
                        @csrf
                        @method('DELETE')
                    </form>
-                 
 
-                  
+
+
 
                   <div class="modal fade bd-que-modal-lg-{{ $wait->id  }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -122,11 +123,11 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          
+
                            <div class="row">
 
                             @for ($i = 1; $i <= 8; $i++)
-                       
+
 
                           <form id="approve-queue-{{ $i }}" action="{{ route('taskshow.move') }}" method="POST" class="d-none1">
                               @csrf
@@ -137,14 +138,14 @@
                           </form>
                           @endfor
 
-                            
+
                            </div>
 
                         </div>
                       </div>
                     </div>
                   </div>
-                  
+
 
                   <div class="modal fade bd-delete-modal-sm-{{ $wait->id }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm">
@@ -160,7 +161,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                         
+
                           <a class="btn btn-danger" href="{{ route('que1.destroy', $wait->id) }}"
                             onclick="event.preventDefault();
                                           document.getElementById('delete-form-{{ $wait->id }}').submit();" data-toggle="tooltip" data-placement="top" title="Delete!">
@@ -190,6 +191,6 @@
       </div>
     </div>
     <!-- Dark table -->
-   
+
   </div>
 @endsection

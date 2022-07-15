@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <!-- CSRF Token -->
             <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Laravel</title>
+        <title>ALLANDRICH - MYTREASURE</title>
 
-        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
+    <link rel="icon" href="https://allarewin.space/ffav-icon.png" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -23,7 +23,7 @@
         <!-- Navbar -->
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="{{ route('payouts') }}"> MYTREASURE - Fast Q system </a>
+            <a class="navbar-brand" href="{{ route('payouts') }}"> ALLANDRICH - MYTREASURE </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,11 +48,11 @@
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 
                 <li class="nav-item d-none d-lg-block ml-lg-4">
-                  <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
+                  <a href="https://allarewin.space/" target="_blank" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
                       <i class="fas fa-home mr-2"></i>
                     </span>
-                    <span class="nav-link-inner--text">Back to mytreasure</span>
+                    <span class="nav-link-inner--text">REGISTER & LOGIN</span>
                   </a>
                 </li>
               </ul>
@@ -72,7 +72,7 @@
                                 <div class="card">
                                   <!-- Card header -->
                                   <div class="card-header border-0">
-                                    <h3 class="mb-0">PAY-OUT STATUS</h3>
+                                    <h3 class="mb-0">Q5-PAY-OUT STATUS</h3>
                                   </div>
                                   <!-- Light table -->
                                   <div class="table-responsive">
@@ -80,8 +80,8 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center">#</th>
-                                            <th>Name</th>
-                                            <th>Bitcoin Address</th>
+                                            <th>TASK NAME</th>
+                                            <th>USERNAME</th>
                                             <th>Payment By</th>
                                             <th class="text-right">Amount</th>
                                             <th class="text-right">Status</th>
@@ -93,10 +93,10 @@
                                         <tr>
                                             <td class="text-center">{{ $index + 1 }}</td>
                                             <td>{{ $pay1->name }}</td>
-                                            <td>{{ $pay1->bitcoin_address }}</td>
+                                            <td>{{ $pay1->username }}</td>
                                             <td>
                                                 @if ($pay1->isPayed == 1)
-                                                    Bitcoin
+                                                    Faucetpay
                                                 @else
                                                     -
                                                 @endif

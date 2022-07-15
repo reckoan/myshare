@@ -83,7 +83,7 @@ class TaskimportController extends Controller
     {
 
        $process =  $this->Process($request->que_id, $request->id);
-       $this->algorithm();
+      // $this->algorithm();
        return redirect()->back()->with('success', 'list as been moved to Queue');
 
     }
@@ -325,6 +325,34 @@ class TaskimportController extends Controller
         $destroy = Taskwating::findOrFail($id);
         $destroy->delete();
         return redirect()->route('taskshow')->with('delete', 'Record has been deleted successfully');
+    }
+
+    public function bulkMoveQ1(){
+
+        $getTaskRow = Taskwating::all();
+
+         if(!is_null($getTaskRow)){
+             foreach($getTaskRow as $idx => $val){
+                 $qdata = [
+                     'name' => $val->name,
+                     'email' => $val->email,
+                     'bitcoin_address' => $val->bitcoin_address,
+                     'username' => $val->username,
+                     'created_at' => Carbon::now(),
+                     'updated_at' => Carbon::now(),
+                     'method' => 'Task',
+                 ];
+
+                 $insert =  DB::table('queue1s')->insert($qdata);
+                 $move = Taskmoved::create($qdata);
+
+                 Taskwating::find($val->id)->delete();
+
+             }
+         }
+
+        return redirect()->back()->with('success', 'Bulk Record has been Moved successfully');
+
     }
 
 }

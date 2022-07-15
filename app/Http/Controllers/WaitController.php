@@ -42,7 +42,7 @@ class WaitController extends Controller
     {
 
        $process =  $this->Process($request->que_id, $request->id);
-       $this->algorithm();
+      // $this->algorithm();
        return redirect()->back()->with('success', 'list as been moved to Queue');
 
     }
@@ -64,7 +64,7 @@ class WaitController extends Controller
                       'username' => $getRow->username,
                       'created_at' => Carbon::now(),
                       'updated_at' => Carbon::now(),
-                      'method' => 'Investment',
+                      'method' => 'Direct',
 
                   ];
 

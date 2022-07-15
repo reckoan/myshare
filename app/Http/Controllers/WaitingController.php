@@ -16,7 +16,7 @@ class WaitingController extends Controller
     public function index()
     {
         $WaitmoveList = Waitmoved::paginate(20);
-       
+
         return view('admin.wait.movelist', compact('WaitmoveList'));
     }
 
@@ -40,25 +40,25 @@ class WaitingController extends Controller
     {
         $this->validate($request, [
             'username' => ['required'],
-            'name' => ['required'],
-            'email' => ['required'],
-            'bitcoin_address' => ['required'],
+//            'name' => ['required'],
+//            'email' => ['required'],
+//            'bitcoin_address' => ['required'],
         ]);
-           
+
         $data = [
-            'username' => $request->username, 
-            'name' => $request->name, 
-            'email' => $request->email, 
-            'bitcoin_address' => $request->bitcoin_address, 
+            'username' => $request->username,
+            'name' => $request->name,
+            'email' => $request->email,
+            'bitcoin_address' => $request->bitcoin_address,
             'transaction_id' => $request->transaction_id,
             'selected_queue' => $request->selected_queue
         ];
 
-        
+
 
         Waiting::create($data);
 
-        return redirect()->route('waiting-list')->with('success', 'SUCCESSFULLY REGISTERED IN WAITING LIST');
+        return redirect()->route('waiting-list')->with('success', 'SUCCESSFULLY ADDED IN WAITING LIST FOR VERIFY');
     }
 
     /**

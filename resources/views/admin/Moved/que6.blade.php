@@ -29,7 +29,7 @@
         <div class="card">
           <!-- Card header -->
           <div class="card-header border-0">
-            <h3 class="mb-0">QUEUE 6 LIST</h3>
+            <h3 class="mb-0">QUEUE 6 PAYOUT LIST</h3>
           </div>
           <!-- Light table -->
           <div class="table-responsive">
@@ -42,6 +42,7 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th class="text-right">BitCoin Address</th>
+                      <th class="text-right">Status</th>
                       <th class="text-right">Actions</th>
                   </tr>
               </thead>
@@ -54,7 +55,8 @@
                       </td>
                       <td>{{ $wait->name }}</td>
                       <td>{{ $wait->email }}</td>
-                      <td class="text-right">{{ $wait->bitcoin_address }}</td>
+                      <td class="text-right">{{ $wait->username }}</td>
+                      <td>{{ ($wait->isPayed == 1) ? 'Paid' : 'Not Paid' }}</td>
                       <td class="td-actions text-right">
                         <button type="button" class="btn btn-info btn-icon btn-sm" data-toggle="modal" data-target=".bd-update-modal-lg-{{ $wait->id }}">
                           <i class="ni ni-align-center pt-1"></i>
@@ -74,7 +76,18 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                                
+                                 <form autocomplete="on" action="https://faucetpay.io/api/v1/send" method="post" target="_blank">
+                    <div class="form-group">
+                      <label for="text">API KEY:</label> <input class="form-control" name="api_key" placeholder="API KEY" type="text" required="">
+                    </div>
+                    <div class="form-group">
+                      <label for="text">QUEUE 1 SPACE REWARD:</label> <input class="form-control" name="amount" placeholder="AMOUNT" type="text" value="125000" required="">
+                    </div>
+                    <div class="form-group">
+                      <label for="text">USER ID:</label> <input class="form-control" name="to" placeholder="FAUCETPAY ID" type="text" required="">
+                    </div>
+                      <button class="btn btn-success btn-md btn-block" type="submit">Submit</button>
+                </form> 
                                 <form id="update-form-{{ $wait->id }}" action="{{ route('que6moved.update6', $wait->id) }}" method="POST" class="">
                                   @csrf
                                   @method('PUT')

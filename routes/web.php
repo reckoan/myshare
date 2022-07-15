@@ -51,7 +51,7 @@ Route::get('/queue-seven', 'Queue7Controller@index')->name('queue-seven');
 Route::get('/queue-eight', 'Queue8Controller@index')->name('queue-eight');
 
 Route::group(['middleware' => 'auth'], function () {
-    
+
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('wait', 'WaitController');
     Route::post('/wait/move', 'WaitController@move')->name('wait.move');
@@ -70,11 +70,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('import', 'ImportController@index')->name('import');
     Route::post('process', 'ImportController@processImport')->name('process');
-    
+
     Route::get('taskimport', 'TaskimportController@index')->name('taskimport');
     Route::get('taskshow', 'TaskimportController@display')->name('taskshow');
     Route::post('taskprocess', 'TaskimportController@processImport')->name('taskprocess');
     Route::post('taskshow/move', 'TaskimportController@move')->name('taskshow.move');
+    Route::get('bulkMoveQ1', 'TaskimportController@bulkMoveQ1')->name('bulkMoveQ1');
     Route::DELETE('taskshow/{id}/destroy', 'TaskimportController@destroy')->name('taskshow.destroy');
 
 
@@ -123,7 +124,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('passwordsave', 'ProfileController@passwordSave')->name('passwordsave');
     Route::post('moveque/moves', 'MoveController@move')->name('moveque.moves');
 
-    
+
 
 
 });

@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <!-- CSRF Token -->
             <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Laravel</title>
+        <title>ALLANDRICH - MYTREASURE</title>
 
-        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
+    <link rel="icon" href="https://allarewin.space/ffav-icon.png" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -24,7 +24,7 @@
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand" href="/">
-              MYTREASURE - Fast Q system
+              ALLANDRICH - MYTREASURE
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -50,11 +50,11 @@
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
 
                 <li class="nav-item d-none d-lg-block ml-lg-4">
-                  <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
+                  <a href="https://allarewin.space/" target="_blank" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
                       <i class="fas fa-home mr-2"></i>
                     </span>
-                    <span class="nav-link-inner--text">Back to mytreasure</span>
+                    <span class="nav-link-inner--text">REGISTER & LOGIN</span>
                   </a>
                 </li>
               </ul>
@@ -74,7 +74,7 @@
                                 <div class="card">
                                   <!-- Card header -->
                                   <div class="card-header border-0">
-                                    <h3 class="mb-0">QUEUE 7 FOR UPGRADE</h3>
+                                    <h3 class="mb-0">QUEUE-7</h3>
                                   </div>
                                   <!-- Light table -->
                                   <div class="table-responsive">
@@ -82,10 +82,11 @@
                                       <thead class="thead-light">
                                         <tr>
                                           <th scope="col" class="sort" data-sort="name">#</th>
-                                          <th scope="col" class="sort" data-sort="budget">Date</th>
-                                          <th scope="col" class="sort" data-sort="status">username</th>
-                                          <th scope="col">Bitcoin</th>
+                                          <th scope="col" class="sort" data-sort="budget">Updated Date</th>
+                                          <th scope="col" class="sort" data-sort="budget">Time/Order ID</th>
+                                          <th scope="col" class="sort" data-sort="status">Username</th>
                                           <th scope="col">Method</th>
+                                           <th scope="col">TASK NAME</th>
                                         </tr>
                                       </thead>
                                       <tbody class="list">
@@ -98,17 +99,21 @@
                                       <td class="budget">
                                         {{ $one->created_at }}
                                       </td>
+                                       <td>
+                                         {{ $one->email }}
+                                      </td>
                                       <td>
                                         <span class="badge badge-dot mr-4">
                                           <i class="bg-warning"></i>
                                           <span class="status">{{ $one->username }}</span>
                                         </span>
                                       </td>
-                                      <td>
-                                         {{ $one->bitcoin_address }}
-                                      </td>
+                                     
                                       <td>
                                          {{ $one->method }}
+                                      </td>
+                                       <td>
+                                         {{ $one->name }}
                                       </td>
 
                                     </tr>

@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Laravel</title>
+        <title>ALLANDRICH - MYTREASURE</title>
 
-        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
+    <link rel="icon" href="https://allarewin.space/ffav-icon.png" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -24,7 +24,7 @@
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand" href="./">
-              MYTREASURE - Fast Q system
+              ALLANDRICH - MYTREASURE
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -50,11 +50,11 @@
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 
                 <li class="nav-item d-none d-lg-block ml-lg-4">
-                  <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
+                  <a href="https://allarewin.space/" target="_blank" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
                       <i class="fas fa-home mr-2"></i>
                     </span>
-                    <span class="nav-link-inner--text">Back to mytreasure</span>
+                    <span class="nav-link-inner--text">REGISTER & LOGIN</span>
                   </a>
                 </li>
               </ul>
@@ -81,7 +81,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                  <i class="ni ni-bullet-list-67"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -102,7 +102,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                  <i class="ni ni-compass-04"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -123,7 +123,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                                  <i class="ni ni-paper-diploma"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -144,7 +144,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                  <i class="ni ni-button-play"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -166,7 +166,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                  <i class="ni ni-chart-bar-32"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -188,7 +188,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                  <i class="ni ni-single-copy-04"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -210,7 +210,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-success text-white rounded-circle shadow">
-                                  <i class="ni ni-sound-wave"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>
@@ -232,7 +232,7 @@
                               </div>
                               <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-danger text-white rounded-circle shadow">
-                                  <i class="ni ni-send"></i>
+                                   <i class="ni ni-bold-right"></i>
                                 </div>
                               </div>
                             </div>

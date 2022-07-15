@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <!-- CSRF Token -->
             <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Laravel</title>
+        <title>ALLANDRICH - MYTREASURE</title>
 
-        <link rel="icon" href="{{ asset('https://ui-avatars.com/api/?name=mytreasure') }}" type="image/png">
+    <link rel="icon" href="https://allarewin.space/ffav-icon.png" type="image/png">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <!-- Icons -->
@@ -24,7 +24,7 @@
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand" href="./">
-              MYTREASURE - Fast Q system
+              ALLANDRICH - MYTREASURE
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -50,11 +50,11 @@
               <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 
                 <li class="nav-item d-none d-lg-block ml-lg-4">
-                  <a href="https://mytreasure.store/" target="_blank" class="btn btn-neutral btn-icon">
+                  <a href="https://allarewin.space/" target="_blank" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
                       <i class="fas fa-home mr-2"></i>
                     </span>
-                    <span class="nav-link-inner--text">Back to mytreasure</span>
+                    <span class="nav-link-inner--text">REGISTER & LOGIN</span>
                   </a>
                 </li>
               </ul>
@@ -97,9 +97,7 @@
                                         <tr>
                                           <th scope="col" class="sort" data-sort="name">#</th>
                                           <th scope="col" class="sort" data-sort="budget">Date</th>
-                                          <th scope="col" class="sort" data-sort="status">Name</th>
                                           <th scope="col" class="sort" data-sort="status">Username</th>
-                                          <th scope="col" class="sort" data-sort="status">Transaction ID</th>
                                           <th scope="col" class="sort" data-sort="status">Queue</th>
                                           <th scope="col">Status</th>
                                         </tr>
@@ -116,17 +114,11 @@
                                             <small><b>{{ $Waiting->created_at->diffForHumans() }}</b></small>
                                           </td>
                                           <td>
-                                            {{ $Waiting->bitcoin_address }}
-                                          </td>
-                                          <td>
                                             <span class="badge badge-dot mr-4">
                                               <i class="bg-warning"></i>
                                               <span class="status">{{ $Waiting->username }}</span>
                                             </span>
                                             
-                                          </td>
-<td>
-                                            {{ $Waiting->transaction_id }}
                                           </td>
                                           <td>
                                             {{ $Waiting->selected_queue }}

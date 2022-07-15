@@ -39,7 +39,7 @@
                 <tr>
                   <th class="text-center">#</th>
                   <th>Date</th>
-                  <th>Name</th>
+                  <th>Username</th>
                   <th>Email</th>
                   <th class="text-right">BitCoin Address</th>
                   <th class="text-right">Actions</th>
@@ -53,7 +53,7 @@
                     <td>{{ $wait->created_at }}
                       <br> <small>{{ $wait->created_at->diffForHumans() }}</small>
                     </td>
-                    <td>{{ $wait->name }}</td>
+                    <td>{{ $wait->username }}</td>
                     <td>{{ $wait->email }}</td>
                     <td class="text-right">{{ $wait->bitcoin_address }}</td>
                     <td class="td-actions text-right">
