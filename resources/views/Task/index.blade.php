@@ -69,58 +69,35 @@
 <!-- Main content -->
 <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-3">
+    <div class="header bg-gradient- py-7 py-lg-8 pt-lg-3">
         <div class="container">
             <div class="header-body text-center mb-7">
                 <img src="https://allarewin.space/allandrich_logo.png" alt="Flowers in Chania" width="75" height="75">
                 <h1 class="text-white text-center">ALLANDRICH</h1>
                 <h1 class="text-white text-center">QUEUE 1 SPACE ACTIVATION </h1>
                 <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-10 col-md-10 px-5">
+                     @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                            </div>
 
                     <div class="col-xl-6 col-lg-6 col-md-6 px-5">
 
 
                         
                        
-                        <div class="card bg-secondary border-0" style="margin-top: 5px">
-
-                            <div class="card-body px-lg-5 py-lg-5">
-                                <div class="text-center text-muted mb-4">
-                                    {{-- <small>Register up with mytreasure.store credentials</small>   --}}
-                                </div>
-                                <h2 class="text-black"> ACTIVATION METHOD - 1 </h2>
-
-                        <p style="color:black;">Your ad views automatically create a space in the queue system..
-                            After current top positions payout space automatically move to the higher queue without any extra effort. No refferal need or No investment need to get space rewards from
-                            here.</p>
-                                <form autocomplete="on" action="https://allarewin.space/" method="GET" target="_blank">
-                            <button class="btn btn-info btn-md btn-block" type="submit">JOIN AND START CREATE SPACE
-                            </button>
-                        </form>
-                           
-                            </div>
-                        </div>
-{{--                        <hr style="height:2px;border-width:10;color:gray;background-color:orange">--}}
-{{--                        <hr style="height:2px;border-width:10;color:gray;background-color:white">--}}
-{{--                        <hr style="height:2px;border-width:10;color:gray;background-color:green">--}}
-
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 px-5">
-
-                       
                         <div class="card bg-secondary border-0">
 
-                            @if(session()->has('success'))
-                                <div class="alert alert-success">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
+                           
 
                             <div class="card-body px-lg-5 py-lg-5">
                                 <div class="text-center text-muted mb-4">
                                     {{-- <small>Register up with mytreasure.store credentials</small>   --}}
                                 </div>
-                                 <h2 class="text-black"> ACTIVATION METHOD - 2 </h2>
+                                 <h2 class="text-black"> ACTIVATION METHOD - 1 </h2>
                         <h3 class="text-black"> STEP -1 </h3>
                         <p style="color:black;">Your online purchase expenses automatically create a space in the queue
                             system. After current top positions payout space automatically move to the higher queue without any extra effort.
@@ -147,7 +124,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Username" type="text"
+                                            <input class="form-control" placeholder="Username" required type="text"
                                                    value="{{ old('username') }}" name="username">
 
                                         </div>
@@ -194,6 +171,331 @@
                                                 <span class="input-group-text"><i class="ni ni-cart"></i></span>
                                             </div>
                                             <input class="form-control" placeholder="EXAMPLE:- Order Number: 408-8028649-9762744"
+                                                   value="{{ old('bitcoin_address') }}" type="text" required name="bitcoin_address">
+                                        </div>
+                                        @error('bitcoin_address')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary mt-4"><i class="ni ni-cloud-upload-96"></i>
+                                            Update & Processed
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+{{--                        <hr style="height:2px;border-width:10;color:gray;background-color:orange">--}}
+{{--                        <hr style="height:2px;border-width:10;color:gray;background-color:white">--}}
+{{--                        <hr style="height:2px;border-width:10;color:gray;background-color:green">--}}
+
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 px-5">
+
+                       
+                        <div class="card bg-secondary border-0">
+
+                            <!--@if(session()->has('success'))-->
+                            <!--    <div class="alert alert-success">-->
+                            <!--        {{ session('success') }}-->
+                            <!--    </div>-->
+                            <!--@endif-->
+
+                            <div class="card-body px-lg-5 py-lg-5">
+                                <div class="text-center text-muted mb-4">
+                                    {{-- <small>Register up with mytreasure.store credentials</small>   --}}
+                                </div>
+                                 <h2 class="text-black"> ACTIVATION METHOD - 2 </h2>
+                        <h3 class="text-black"> STEP -1 </h3>
+                        <p style="color:black;">Your online purchase expenses automatically create a space in the queue
+                            system. After current top positions payout space automatically move to the higher queue without any extra effort.
+                             No refferal need or No investment need to get
+                            space rewards from here.</p>
+                            <a target="_blank"
+                               href="https://www.amazon.in/gp/search?ie=UTF8&tag=uh5e8c352824543-21&linkCode=ur2&linkId=af37881ea757a450a449796f9d8023f6&camp=3638&creative=24630&index=aps&keywords=amazon+fresh+items"
+                               target="_blank">
+                                <button class="btn btn-info btn-md btn-block">BUY PRODUCTS FROM AMAZON - CLICK HERE
+                                </button>
+                            </a>
+
+                           <h3 class="text-black"> STEP -2 </h3>
+                        <h1 class="text-black">Buy products Then fill the form</h1>
+                        <p style="color:black;">Tips:- Please wait for 48 hours after submit the details to
+                            verify your purchase, once we completed the process we will inform you the space
+                            details or you can find it in Q1 status page.</p>
+                                <form role="form" method="post" action="{{ route('tackregister.store') }}">
+                                    @csrf
+
+                                    <div class="form-group">
+                                        <label>ALLAREWIN.SPACE USERNAME</label>
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Username" required type="text"
+                                                   value="{{ old('username') }}" name="username">
+
+                                        </div>
+                                        @error('username')
+                                        <span class="text-danger" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group d-none">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Name" type="text" value="{{ old('name') }}"
+                                                   name="name">
+
+                                        </div>
+                                        @error('name')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group d-none">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Email" type="email"
+                                                   value="{{ old('email') }}" name="email">
+                                        </div>
+                                        @error('email')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>AMAZON ORDER NUMBER</label>
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-cart"></i></span>
+                                            </div>
+                                            <input class="form-control" required placeholder="EXAMPLE:- Order Number: 408-8028649-9762744"
+                                                   value="{{ old('bitcoin_address') }}" type="text" name="bitcoin_address">
+                                        </div>
+                                        @error('bitcoin_address')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary mt-4"><i class="ni ni-cloud-upload-96"></i>
+                                            Update & Processed
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 px-5">
+
+                       
+                        <div class="card bg-secondary border-0">
+
+                           
+
+                            <div class="card-body px-lg-5 py-lg-5">
+                                <div class="text-center text-muted mb-4">
+                                    {{-- <small>Register up with mytreasure.store credentials</small>   --}}
+                                </div>
+                                 <h2 class="text-black"> ACTIVATION METHOD - 3 </h2>
+                        <h3 class="text-black"> STEP -1 </h3>
+                        <p style="color:black;">Your online purchase expenses automatically create a space in the queue
+                            system. After current top positions payout space automatically move to the higher queue without any extra effort.
+                             No refferal need or No investment need to get
+                            space rewards from here.</p>
+                            <a target="_blank"
+                               href="https://www.amazon.in/gp/search?ie=UTF8&tag=uh5e8c352824543-21&linkCode=ur2&linkId=af37881ea757a450a449796f9d8023f6&camp=3638&creative=24630&index=aps&keywords=amazon+fresh+items"
+                               target="_blank">
+                                <button class="btn btn-info btn-md btn-block">BUY PRODUCTS FROM AMAZON - CLICK HERE
+                                </button>
+                            </a>
+
+                           <h3 class="text-black"> STEP -2 </h3>
+                        <h1 class="text-black">Buy products Then fill the form</h1>
+                        <p style="color:black;">Tips:- Please wait for 48 hours after submit the details to
+                            verify your purchase, once we completed the process we will inform you the space
+                            details or you can find it in Q1 status page.</p>
+                                <form role="form" method="post" action="{{ route('tackregister.store') }}">
+                                    @csrf
+
+                                    <div class="form-group">
+                                        <label>ALLAREWIN.SPACE USERNAME</label>
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Username" required type="text"
+                                                   value="{{ old('username') }}" name="username">
+
+                                        </div>
+                                        @error('username')
+                                        <span class="text-danger" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group d-none">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Name" type="text" value="{{ old('name') }}"
+                                                   name="name">
+
+                                        </div>
+                                        @error('name')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group d-none">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Email" type="email"
+                                                   value="{{ old('email') }}" name="email">
+                                        </div>
+                                        @error('email')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>AMAZON ORDER NUMBER</label>
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-cart"></i></span>
+                                            </div>
+                                            <input class="form-control" required placeholder="EXAMPLE:- Order Number: 408-8028649-9762744"
+                                                   value="{{ old('bitcoin_address') }}" type="text" name="bitcoin_address">
+                                        </div>
+                                        @error('bitcoin_address')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary mt-4"><i class="ni ni-cloud-upload-96"></i>
+                                            Update & Processed
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 px-5">
+
+                       
+                        <div class="card bg-secondary border-0">
+
+                          
+
+                            <div class="card-body px-lg-5 py-lg-5">
+                                <div class="text-center text-muted mb-4">
+                                    {{-- <small>Register up with mytreasure.store credentials</small>   --}}
+                                </div>
+                                 <h2 class="text-black"> ACTIVATION METHOD - 4 </h2>
+                        <h3 class="text-black"> STEP -1 </h3>
+                        <p style="color:black;">Your online purchase expenses automatically create a space in the queue
+                            system. After current top positions payout space automatically move to the higher queue without any extra effort.
+                             No refferal need or No investment need to get
+                            space rewards from here.</p>
+                            <a target="_blank"
+                               href="https://www.amazon.in/gp/search?ie=UTF8&tag=uh5e8c352824543-21&linkCode=ur2&linkId=af37881ea757a450a449796f9d8023f6&camp=3638&creative=24630&index=aps&keywords=amazon+fresh+items"
+                               target="_blank">
+                                <button class="btn btn-info btn-md btn-block">BUY PRODUCTS FROM AMAZON - CLICK HERE
+                                </button>
+                            </a>
+
+                           <h3 class="text-black"> STEP -2 </h3>
+                        <h1 class="text-black">Buy products Then fill the form</h1>
+                        <p style="color:black;">Tips:- Please wait for 48 hours after submit the details to
+                            verify your purchase, once we completed the process we will inform you the space
+                            details or you can find it in Q1 status page.</p>
+                                <form role="form" method="post" action="{{ route('tackregister.store') }}">
+                                    @csrf
+
+                                    <div class="form-group">
+                                        <label>ALLAREWIN.SPACE USERNAME</label>
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                                            </div>
+                                            <input class="form-control" required placeholder="Username" type="text"
+                                                   value="{{ old('username') }}" name="username">
+
+                                        </div>
+                                        @error('username')
+                                        <span class="text-danger" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group d-none">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Name" type="text" value="{{ old('name') }}"
+                                                   name="name">
+
+                                        </div>
+                                        @error('name')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group d-none">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <input class="form-control" placeholder="Email" type="email"
+                                                   value="{{ old('email') }}" name="email">
+                                        </div>
+                                        @error('email')
+                                        <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>AMAZON ORDER NUMBER</label>
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-cart"></i></span>
+                                            </div>
+                                            <input class="form-control" required placeholder="EXAMPLE:- Order Number: 408-8028649-9762744"
                                                    value="{{ old('bitcoin_address') }}" type="text" name="bitcoin_address">
                                         </div>
                                         @error('bitcoin_address')

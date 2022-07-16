@@ -66,7 +66,7 @@
         <div class="main-content">
 
           <!-- Header -->
-          <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-3">
+          <div class="header bg-gradient- py-7 py-lg-8 pt-lg-3">
             <div class="container">
               <div class="header-body text-center mb-7">
                   <img src="https://allarewin.space/allandrich_logo.png" alt="Flowers in Chania" width="75" height="75">
